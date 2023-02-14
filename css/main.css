@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  background: linear-gradient(#af67e9, #6565e7);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+#faq-container {
+  width: 70vw;
+  min-width: 950px;
+  min-height: 540px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  position: relative; }
+  #faq-container #box-img {
+    position: absolute;
+    top: 235px;
+    left: -92px;
+    z-index: 1; }
+  #faq-container #faq-img {
+    background-image: url("/images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 1000px 1000px;
+    background-position: left -555px top -300px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 50%; }
+    #faq-container #faq-img #box-img-mobile {
+      display: none; }
+    #faq-container #faq-img #woman-img {
+      width: 100%;
+      transform: translate(-90px, 0px); }
+  #faq-container #faq-big-questions {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    user-select: none; }
+    #faq-container #faq-big-questions h1 {
+      font-size: 2rem;
+      font-weight: 700; }
+    #faq-container #faq-big-questions #faq-questions {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 2rem;
+      gap: 1rem;
+      padding-right: 7rem; }
+      #faq-container #faq-big-questions #faq-questions .question-container {
+        border-bottom: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0.8rem;
+        cursor: pointer; }
+        #faq-container #faq-big-questions #faq-questions .question-container .show-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          pointer-events: none;
+          padding: 0.5rem 0rem; }
+          #faq-container #faq-big-questions #faq-questions .question-container .show-container .question {
+            font-size: 0.9rem; }
+          #faq-container #faq-big-questions #faq-questions .question-container .show-container .arrow-down {
+            width: 12px;
+            transition: transform 0.4s; }
+        #faq-container #faq-big-questions #faq-questions .question-container .hidden-container {
+          max-height: 0px;
+          visibility: hidden;
+          opacity: 0;
+          overflow-y: auto;
+          transition: opacity 0.5s, visibility 0.5s;
+          color: #4a4b5e;
+          pointer-events: none;
+          user-select: none; }
+
+.open-close {
+  max-height: 100px !important;
+  visibility: visible !important;
+  opacity: 1 !important; }
+
+.turn-cursor {
+  transform: rotate(180deg); }
+
+.question-active {
+  font-weight: 700;
+  color: #1d1e35; }
+
+@media screen and (max-width: 950px) {
+  #faq-container {
+    flex-direction: column;
+    min-width: 300px;
+    align-items: center;
+    margin-top: 5rem; }
+    #faq-container #box-img {
+      display: none; }
+    #faq-container #faq-img {
+      position: absolute;
+      top: -140px;
+      width: 300px;
+      height: 240px;
+      justify-content: center;
+      background-size: 240px 240px;
+      background-position: left 30px top -10px; }
+      #faq-container #faq-img #box-img-mobile {
+        display: block;
+        position: absolute;
+        width: 100px;
+        left: 20px;
+        top: 95px; }
+      #faq-container #faq-img #woman-img {
+        width: 80%;
+        transform: translate(0px, 0px);
+        overflow: visible; }
+    #faq-container #faq-big-questions {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin-top: 7rem; }
+      #faq-container #faq-big-questions #faq-questions {
+        padding: 0rem 2rem; } }
+
+@media screen and (max-width: 500px) {
+  html,
+  p {
+    font-size: 0.8rem; }
+  #faq-big-questions {
+    margin-top: 10rem !important; } }
+
+@media screen and (max-height: 375px) {
+  body {
+    height: auto;
+    background-color: red; }
+  #faq-container {
+    height: 120vh;
+    background-color: red; } }
